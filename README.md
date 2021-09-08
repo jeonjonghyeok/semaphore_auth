@@ -15,3 +15,9 @@ npm run bootstrap
 scripts/buildImagesGoerli.sh
 docker-compose -f docker/docker-compose-goerli.yaml up
 ```
+
+## Posting Guide
+
+```
+https://hackmd.io/@9IcKGEd_QdOkn_Eh8WiTuA/ByaJTKLfK
+```
