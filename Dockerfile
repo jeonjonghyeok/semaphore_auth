@@ -14,12 +14,10 @@ WORKDIR /hojicha/packages
 
 RUN mkdir common && \
     mkdir config && \
-    mkdir backend && \
     mkdir frontend
 
 COPY packages/common/package.json common/
 COPY packages/config/package.json config/
-COPY packages/backend/package.json backend/
 COPY packages/frontend/package.json frontend/
 
 WORKDIR /hojicha
@@ -31,7 +29,6 @@ WORKDIR /hojicha/packages
 
 COPY packages/common common
 COPY packages/config config
-COPY packages/backend backend
 COPY packages/frontend frontend
 
 WORKDIR /hojicha/

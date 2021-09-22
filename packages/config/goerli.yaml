@@ -5,16 +5,6 @@ frontend:
   supportedNetworkName: 'goerli'
   supportedNetwork: 5
 
-backend:
-  serverName: 'hojicha'
-  network: 'goerli'
-  db:
-    client: 'pg'
-    connection:
-      host: 'hojicha-db'
-      port: 5432
-      user: 'postgres'
-      database: 'hojicha'
 
 chain:
   url: 'https://goerli.infura.io/v3/be5a8f1b309e4831bbc4205d70d0e285'

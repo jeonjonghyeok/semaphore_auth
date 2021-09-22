@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { NewPost, Posts } from './posts'
 import DownloadSnarks from '../components/download_snarks'
 
 import { useToasts } from 'react-toast-notifications'
@@ -21,7 +20,6 @@ const Group = () => {
 
   const [idExists, setIdExists] = useState(hasId())
   const contract = useProofOfBurn()
-  const [newPostId, setNewPostId] = useState(null)
   const isRegistered = useIsRegistered()
   const forceRerender = useState()[1]
 
@@ -65,12 +63,7 @@ const Group = () => {
     addToast('Circuit and proving key downloaded', { appearance: 'success' })
     setSnarksDownloaded(true)
   }
-  const onPublish = result => {
-    console.log(result)
-    if (!result.error) {
-      setNewPostId(result.postId)
-    }
-  }
+
 
   let onboarding = null
   if (!idExists) {
@@ -86,13 +79,10 @@ const Group = () => {
   }
   return (
     <div className='container'>
-      {isRegistered && snarksDownloaded ? (
-        <NewPost onPublish={onPublish} />
-      ) : (
+      {
         onboarding
-      )}
+      }
       <hr />
-      <Posts newPostId={newPostId} />
       <ProofOfBurn />
     </div>
   )
