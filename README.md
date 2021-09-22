@@ -17,3 +17,4 @@ npm run bootstrap
 scripts/buildImagesGoerli.sh
 docker-compose -f docker/docker-compose-goerli.yaml up
 ```
+# semaphore-register
